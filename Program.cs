@@ -6,7 +6,10 @@ namespace csharp_intermediate_polymorphism
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var sql = new SqlConnection("colin/sql/db");
+
+            sql.OpenConnection();
+            sql.CloseConnection();
         }
     }
 }
