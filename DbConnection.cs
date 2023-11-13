@@ -4,7 +4,7 @@ using System.Text;
 
 namespace csharp_intermediate_polymorphism
 {
-    class DbConnection
+    abstract class DbConnection
     {
         public string ConnectionString { get; set; }
         public TimeSpan Timeout { get; set; }
@@ -19,5 +19,8 @@ namespace csharp_intermediate_polymorphism
             
             ConnectionString = connectionString;
         }
+
+        public abstract void OpenConnection();
+        public abstract void CloseConnection();
     }
 }
