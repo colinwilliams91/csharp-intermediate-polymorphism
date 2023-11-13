@@ -11,6 +11,12 @@ namespace csharp_intermediate_polymorphism
 
         public DbConnection(string connectionString)
         {
+            // ensure class is always in valid state
+            if (string.IsNullOrEmpty(connectionString))
+            {
+                throw new ArgumentNullException();
+            }
+            
             ConnectionString = connectionString;
         }
     }
