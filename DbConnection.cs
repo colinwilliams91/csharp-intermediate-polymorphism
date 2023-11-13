@@ -8,6 +8,7 @@ namespace csharp_intermediate_polymorphism
     {
         public string ConnectionString { get; set; }
         public TimeSpan Timeout { get; set; }
+        public abstract string DbType { get; set; }
 
         public DbConnection(string connectionString)
         {
