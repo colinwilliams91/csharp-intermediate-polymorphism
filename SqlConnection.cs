@@ -6,6 +6,8 @@ namespace csharp_intermediate_polymorphism
 {
     class SqlConnection : DbConnection
     {
+        public override string DbType { get; set; } = "T-SQL";
+
         public SqlConnection(string connectionString) : base(connectionString) {}
 
         public override void OpenConnection()

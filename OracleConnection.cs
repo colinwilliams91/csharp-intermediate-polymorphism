@@ -6,6 +6,8 @@ namespace csharp_intermediate_polymorphism
 {
     class OracleConnection : DbConnection
     {
+        public override string DbType { get; set; } = "OLTP";
+
         public OracleConnection(string connectionString) : base(connectionString) {}
 
         public override void OpenConnection()
